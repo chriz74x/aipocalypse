@@ -48,6 +48,32 @@ This entire program was written **exclusively through AI prompting**. No human-w
 
 The final result is the file you see in this repository.
 
+## Download
+
+A pre-built `aipocalypse.prg` is included alongside the assembly source.
+You can run it directly in VICE without installing ACME.
+
+[Download aipocalypse.prg](aipocalypse.prg)
+
+## Included versions
+
+This repository includes both the initial AI-generated result and the
+final demo, with assembly source (`.asm`) and a pre-built executable
+(`.prg`) for each.
+
+- Initial version: the result of the first prompt, before the raster
+  timing fixes and subsequent additions.
+- Final version: the completed demo described in this README.
+
+The initial version is preserved for comparison and to document the
+development process.
+
+To run the final demo in VICE:
+
+```bash
+x64sc aipocalypse.prg
+
+
 ## Building
 
 Requirements:
