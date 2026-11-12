@@ -12,7 +12,9 @@ A fully self-contained Commodore 64 demo written in 6502 assembly (ACME syntax).
 - Overlapping multi-colour raster bars moving in a sinusoidal pattern
 - Sprite-based scrolling text with soft fade
 - Animated logo that bounces and collides with the bars
-- Stable raster timing, sprite multiplexing and open vertical border
+- Stable raster timing and sprite multiplexing
+- Open top/bottom borders, plus cycle-timed left/right border opening
+  on the logo and scroller raster lines
 - Embedded Rob Hubbard music (*One Man and His Droid*)
 
 Everything (code, font, logo bitmap, music data) is contained in a single `.asm` file.
@@ -28,12 +30,13 @@ This entire program was written **exclusively through AI prompting**. No human-w
 
 2. The first result produced raster bars that were **not correctly timed**.
 
-3. Over the following **4–5 hours** I iteratively asked the AI to:
+3. Over the following **4–5 hours**, I iteratively asked the AI to:
    - Fix timing and stabilise the raster effects
    - Add a scrolling text message
    - Implement a bouncing logo with collision against the bars
    - Add music
-   - Open the vertical border
+   - Open the top/bottom borders and the left/right borders
+     on the logo and scroller raster lines
    - Handle sprite multiplexing and colour-table switching
    - Polish cycle-exact kernels
 
@@ -65,7 +68,12 @@ x64 aipocalypse.prg
 
 - Cycle-exact raster bar kernel
 - Two stable sprite kernels (logo + scroller)
-- Open vertical border (opened once at boot and kept open)
+- Top/bottom border opening initialized at boot and maintained
+  through timed $D011 writes
+- Top/bottom border opening initialized at boot and maintained
+  through timed `$D011` writes
+- Left/right borders opened on each logo/scroller raster line
+  using cycle-timed `DEC`/`INC $D016` sequences
 - Double-buffered sprite shifting for the scroller
 - Music player and data embedded at `$1000`
 - Font at `$3000`, logo sprites at `$2C00`
