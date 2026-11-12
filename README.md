@@ -42,7 +42,7 @@ This entire program was written **exclusively through AI prompting**. No human-w
    - Open the top/bottom borders and the left/right borders
      on the logo and scroller raster lines
    - Handle sprite multiplexing and colour-table switching
-   - Polish cycle-exact kernels
+   - Polish cycle-exact routines
 
 4. The conversation later moved to Perplexity’s **“Computer”** mode. In that mode the AI first used **Claude Opus**, then switched to **OpenAI o1**.
 
@@ -96,8 +96,8 @@ x64 aipocalypse.prg
 
 ## Technical notes
 
-- Cycle-exact raster bar kernel
-- Two stable sprite kernels (logo + scroller)
+- Cycle-exact raster bars routine
+- Two stable sprite routines (logo + scroller)
 - Top/bottom border opening initialized at boot and maintained
   through timed $D011 writes
 - Top/bottom border opening initialized at boot and maintained
