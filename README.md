@@ -3,13 +3,13 @@
 
 A fully self-contained Commodore 64 demo written in 6502 assembly (ACME syntax).
 
-## Screenshot
-
-![AIPOCALYPSE running on a PAL Commodore 64 in VICE](images/aipocalypse-ss.png)
-
 **PAL only · No external assets required · Assembles to a single PRG**
 
 ![C64](https://img.shields.io/badge/Platform-Commodore%2064-blue) ![Assembler](https://img.shields.io/badge/Assembler-ACME-orange) ![Music](https://img.shields.io/badge/SID-Rob%20Hubbard-purple)
+
+## Screenshot
+
+![AIPOCALYPSE running on a PAL Commodore 64 in VICE](images/aipocalypse-ss.png)
 
 ## What it does
 
