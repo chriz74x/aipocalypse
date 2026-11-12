@@ -71,7 +71,7 @@ development process.
 To run the final demo in VICE:
 
 ```bash
-x64sc aipocalypse.prg
+x64sc aipocalypse.prg```
 
 
 ## Building
